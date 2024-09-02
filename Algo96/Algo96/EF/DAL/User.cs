@@ -1,4 +1,4 @@
-﻿namespace Algo96.Models
+﻿namespace Algo96.EF.DAL
 {
     public enum Role
     {
