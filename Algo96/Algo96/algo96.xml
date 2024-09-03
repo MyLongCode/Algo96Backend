@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Algo96</name>
+    </assembly>
+    <members>
+        <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
+            <summary>
+            Зарегать пользователя
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.UserController.GetAllUsers">
+            <summary>
+            Получить всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.UserController.Token(Algo96.dto.User.GetUserTokenRequest)">
+            <summary>
+            Получить токен
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

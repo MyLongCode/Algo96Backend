@@ -93,4 +93,11 @@ C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\algo96.xml\Debu
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\algo96.xml\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\algo96.xml\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\algo96.xml\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\algo96
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\algo96.xml
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
