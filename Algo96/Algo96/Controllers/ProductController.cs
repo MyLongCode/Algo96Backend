@@ -58,7 +58,11 @@ namespace Algo96.Controllers
             db.SaveChanges();
             return Ok(product.Id);
         }
-
+        /// <summary>
+        /// Добавить категорию
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("/category")]
         public async Task<IActionResult> CreateCategory(string title)
@@ -79,7 +83,7 @@ namespace Algo96.Controllers
                 // создаем папку для хранения файлов
                 Directory.CreateDirectory(uploadPath);
 
-                string fullPath = $"{uploadPath}/{image.Name}";
+                string fullPath = $"{uploadPath}/{image.FileName}";
 
                 // сохраняем файл в папку Files в каталоге wwwroot
                 using (var fileStream = new FileStream( fullPath, FileMode.Create))
@@ -87,7 +91,7 @@ namespace Algo96.Controllers
                     image.CopyToAsync(fileStream);
                 }
             }
-            return image.Name;
+            return image.FileName;
         }
     }
 }

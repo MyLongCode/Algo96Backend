@@ -4,6 +4,33 @@
         <name>Algo96</name>
     </assembly>
     <members>
+        <member name="M:Algo96.Controllers.CourseController.GetCourses">
+            <summary>
+            Получить все курсы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.GetCourseById(System.Int32)">
+            <summary>
+            Получить курс по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.CreateCourse(System.String)">
+            <summary>
+            Добавить курс
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.DeleteCourse(System.Int32)">
+            <summary>
+            Удалить курс по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.ProductController.GetProducts">
             <summary>
             Получить все продукты
@@ -22,6 +49,13 @@
             Добавить новый продукт
             </summary>
             <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.CreateCategory(System.String)">
+            <summary>
+            Добавить категорию
+            </summary>
+            <param name="title"></param>
             <returns></returns>
         </member>
         <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
