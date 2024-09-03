@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.AssemblyInfo.cs
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\obj\algo96\Debug\net6.0\Algo96.MvcApplicationPartsAssemblyInfo.cache

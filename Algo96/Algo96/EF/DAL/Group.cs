@@ -1,5 +1,18 @@
-﻿namespace Algo96.EF.DAL
+﻿using System;
+using System.Collections.Generic;
+
+namespace Algo96.EF.DAL
 {
+    public enum DayOfWeek
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday,
+    }
     public class Group
     {
         public int Id { get; set; }

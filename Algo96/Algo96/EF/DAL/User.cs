@@ -1,4 +1,6 @@
-﻿namespace Algo96.EF.DAL
+﻿using System.Collections.Generic;
+
+namespace Algo96.EF.DAL
 {
     public enum Role
     {

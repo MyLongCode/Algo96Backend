@@ -1,4 +1,6 @@
-﻿namespace Algo96.EF.DAL
+﻿using System;
+
+namespace Algo96.EF.DAL
 {
     public class Purchase
     {
