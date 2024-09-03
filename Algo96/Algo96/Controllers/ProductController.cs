@@ -1,4 +1,6 @@
-﻿using Algo96.EF;
+﻿using Algo96.dto.Product;
+using Algo96.EF;
+using Algo96.EF.DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -6,16 +8,86 @@ namespace Algo96.Controllers
 {
     public class ProductController : Controller
     {
-        private ApplicationDbContext db;
-        public ProductController(ApplicationDbContext db)
+        IWebHostEnvironment _appEnvironment;
+        ApplicationDbContext db;
+        public ProductController(ApplicationDbContext context, IWebHostEnvironment appEnvironment)
         {
-            this.db = db;
+            _appEnvironment = appEnvironment;
+            db = context;
         }
+        /// <summary>
+        /// Получить все продукты
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("/product")]
-        public IActionResult GetProducts()
+        public async Task<IActionResult> GetProducts()
         {
             return Ok(db.Products.ToList());
+        }
+        /// <summary>
+        /// Получить продукт по id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("/product/{id}")]
+        public async Task<IActionResult> GetProductById(int id)
+        {
+            var product = db.Products.Find(id);
+            return Ok(product);
+        }
+        
+        /// <summary>
+        /// Добавить новый продукт
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("/product")]
+        public IActionResult CreateProduct(CreateProductRequest dto)
+        {
+            var product = new Product
+            {
+                Name = dto.Name,
+                Image = UploadFile(dto.Image).Result,
+                CategoryId = dto.CategoryId,
+                Description = dto.Description,
+            };
+            db.Products.Add(product);
+            db.SaveChanges();
+            return Ok(product.Id);
+        }
+
+        [HttpPost]
+        [Route("/category")]
+        public async Task<IActionResult> CreateCategory(string title)
+        {
+            var category = new Category { Title = title };
+            db.Categories.Add(category);
+            db.SaveChanges();
+            return Ok(category.Id);
+        }
+
+        public async Task<string> UploadFile(IFormFile dto)
+        {
+            string path = "";
+            IFormFile image = dto;
+            if (image != null)
+            {
+                var uploadPath = $"{Directory.GetCurrentDirectory()}/Files";
+                // создаем папку для хранения файлов
+                Directory.CreateDirectory(uploadPath);
+
+                string fullPath = $"{uploadPath}/{image.Name}";
+
+                // сохраняем файл в папку Files в каталоге wwwroot
+                using (var fileStream = new FileStream( fullPath, FileMode.Create))
+                {
+                    image.CopyToAsync(fileStream);
+                }
+            }
+            return image.Name;
         }
     }
 }

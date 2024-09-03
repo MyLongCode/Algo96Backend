@@ -23,7 +23,7 @@ namespace Algo96.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("/user/register")]
-        public IActionResult RegisterUser([FromBody] RegisterUserRequest dto)
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest dto)
         {
             var userFound = db.Users.FirstOrDefault(u => u.Login == dto.Login);
             if (userFound != null) return BadRequest("user with this login is already register");
@@ -49,7 +49,7 @@ namespace Algo96.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("/user")]
-        public IActionResult GetAllUsers()
+        public async Task<IActionResult> GetAllUsers()
         {
             User[] users = db.Users.ToArray();
             if (users == null)
@@ -84,7 +84,7 @@ namespace Algo96.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost("/user/token")]
-        public IActionResult Token(GetUserTokenRequest dto)
+        public async Task<IActionResult> Token(GetUserTokenRequest dto)
         {
             var identity = GetIdentity(dto.Login, dto.Password);
             if (identity == null)

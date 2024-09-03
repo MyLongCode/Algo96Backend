@@ -4,6 +4,26 @@
         <name>Algo96</name>
     </assembly>
     <members>
+        <member name="M:Algo96.Controllers.ProductController.GetProducts">
+            <summary>
+            Получить все продукты
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.GetProductById(System.Int32)">
+            <summary>
+            Получить продукт по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.CreateProduct(Algo96.dto.Product.CreateProductRequest)">
+            <summary>
+            Добавить новый продукт
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
             <summary>
             Зарегать пользователя

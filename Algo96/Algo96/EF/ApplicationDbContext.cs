@@ -13,11 +13,12 @@ namespace Algo96.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchase { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-            //Database.EnsureCreated();
+            //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            Database.EnsureCreated();
         }
     }
 }
