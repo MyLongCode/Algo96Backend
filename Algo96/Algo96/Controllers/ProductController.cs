@@ -1,5 +1,6 @@
 ﻿using Algo96.EF;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Algo96.Controllers
 {
@@ -10,8 +11,9 @@ namespace Algo96.Controllers
         {
             this.db = db;
         }
-
-        public IActionResult Index()
+        [HttpGet]
+        [Route("/product")]
+        public IActionResult GetProducts()
         {
             return Ok(db.Products.ToList());
         }

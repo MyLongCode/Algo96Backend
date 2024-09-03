@@ -1,5 +1,6 @@
 ﻿using Algo96.EF.DAL;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Algo96.EF
 {
