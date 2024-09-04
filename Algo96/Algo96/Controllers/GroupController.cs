@@ -20,5 +20,13 @@ namespace Algo96.Controllers
 
         [HttpGet]
         [Route("/group/{id}")]
+        public async Task<IActionResult> GetGroupById (int id)
+        {
+            return Ok(db.Groups.Find(id));
+        }
+
+        [HttpPost]
+        [Route("/group")]
+        public async Task<IActionResult> CreateGroup()
     }
 }
