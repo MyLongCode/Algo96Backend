@@ -10,9 +10,15 @@ namespace Algo96.Controllers
         {
             this.db = db;
         }
-        public IActionResult Index()
+
+        [HttpGet]
+        [Route("/group")]
+        public async Task<IActionResult> GetGroups()
         {
-            return View();
+            return Ok(db.Groups.ToList());
         }
+
+        [HttpGet]
+        [Route("/group/{id}")]
     }
 }
