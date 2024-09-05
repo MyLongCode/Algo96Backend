@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace Algo96.EF.DAL
 {
