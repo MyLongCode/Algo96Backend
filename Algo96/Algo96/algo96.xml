@@ -31,6 +31,26 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Algo96.Controllers.GroupController.GetGroups">
+            <summary>
+            Получить все группы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.GroupController.GetGroupById(System.Int32)">
+            <summary>
+            Получить группу по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.GroupController.CreateGroup(Algo96.dto.Group.CreateGroupRequest)">
+            <summary>
+            Создать группу
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.PlaceController.GetPlaces">
             <summary>
             Получить все площадки
@@ -46,7 +66,7 @@
         </member>
         <member name="M:Algo96.Controllers.PlaceController.CreatePlace(System.String)">
             <summary>
-            Добавить курс
+            Добавить площадку
             </summary>
             <param name="title"></param>
             <returns></returns>

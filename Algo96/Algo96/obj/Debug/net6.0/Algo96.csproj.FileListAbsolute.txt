@@ -101,3 +101,7 @@ C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Mi
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\user\source\repos\ConcurrencyInCSharp\Algo96\Algo96\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -36,7 +36,7 @@ namespace Algo96.Controllers
         }
 
         /// <summary>
-        /// Добавить курс
+        /// Добавить площадку
         /// </summary>
         /// <param name="title"></param>
         /// <returns></returns>

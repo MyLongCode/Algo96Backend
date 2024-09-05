@@ -2,6 +2,7 @@
 using Algo96.EF;
 using Algo96.EF.DAL;
 using Microsoft.AspNetCore.Mvc;
+using System.Web.Http.Description;
 using System.Xml.Linq;
 
 namespace Algo96.Controllers
@@ -14,22 +15,47 @@ namespace Algo96.Controllers
             this.db = db;
         }
 
+        /// <summary>
+        /// Получить все группы
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("/group")]
         public async Task<IActionResult> GetGroups()
         {
+            db.SaveChanges();
             return Ok(db.Groups.ToList());
         }
 
+        /// <summary>
+        /// Получить группу по id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("/group/{id}")]
+        [ResponseType(typeof(GetGroupResponse))]
         public async Task<IActionResult> GetGroupById (int id)
         {
-            return Ok(db.Groups.Find(id));
+            var group = db.Groups.Find(id);
+
+            return Ok(new GetGroupResponse
+            {
+                Id = id,
+                Course = group.Course.ToString(),
+                DayOfWeek = group.DayOfWeek.ToString(),
+                Place = group.Place.ToString()
+            });
         }
 
+        /// <summary>
+        /// Создать группу
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("/group")]
+
         public async Task<IActionResult> CreateGroup(CreateGroupRequest dto)
         {
             var group = new Group
@@ -41,7 +67,7 @@ namespace Algo96.Controllers
             };
             db.Groups.Add(group);
             db.SaveChanges();
-            return Ok(group);
+            return Ok(db.Groups.ToList());
 
         }
     }
