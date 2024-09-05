@@ -17,8 +17,8 @@ namespace Algo96.EF
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-            Database.EnsureCreated();
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            //Database.EnsureCreated();
         }
     }
 }

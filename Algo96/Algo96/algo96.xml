@@ -31,6 +31,33 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Algo96.Controllers.PlaceController.GetPlaces">
+            <summary>
+            Получить все площадки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.GetPlaceById(System.Int32)">
+            <summary>
+            Получить площадку по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.CreatePlace(System.String)">
+            <summary>
+            Добавить курс
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.DeletePlace(System.Int32)">
+            <summary>
+            Удалить площадку по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.ProductController.GetProducts">
             <summary>
             Получить все продукты
