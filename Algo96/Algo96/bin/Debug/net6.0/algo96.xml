@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Algo96</name>
+    </assembly>
+    <members>
+        <member name="M:Algo96.Controllers.CourseController.GetCourses">
+            <summary>
+            Получить все курсы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.GetCourseById(System.Int32)">
+            <summary>
+            Получить курс по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.CreateCourse(System.String)">
+            <summary>
+            Добавить курс
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.CourseController.DeleteCourse(System.Int32)">
+            <summary>
+            Удалить курс по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.GroupController.GetGroups">
+            <summary>
+            Получить все группы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.GroupController.GetGroupById(System.Int32)">
+            <summary>
+            Получить группу по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.GroupController.CreateGroup(Algo96.dto.Group.CreateGroupRequest)">
+            <summary>
+            Создать группу
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.GetPlaces">
+            <summary>
+            Получить все площадки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.GetPlaceById(System.Int32)">
+            <summary>
+            Получить площадку по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.CreatePlace(System.String)">
+            <summary>
+            Добавить площадку
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PlaceController.DeletePlace(System.Int32)">
+            <summary>
+            Удалить площадку по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.GetProducts">
+            <summary>
+            Получить все продукты
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.GetProductById(System.Int32)">
+            <summary>
+            Получить продукт по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.CreateProduct(Algo96.dto.Product.CreateProductRequest)">
+            <summary>
+            Добавить новый продукт
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.CreateCategory(System.String)">
+            <summary>
+            Добавить категорию
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
+            <summary>
+            Зарегать пользователя
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.UserController.GetAllUsers">
+            <summary>
+            Получить всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.UserController.Token(Algo96.dto.User.GetUserTokenRequest)">
+            <summary>
+            Получить токен
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
