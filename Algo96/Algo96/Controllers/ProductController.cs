@@ -23,7 +23,7 @@ namespace Algo96.Controllers
         [Route("/product")]
         public async Task<IActionResult> GetProducts()
         {
-            return Ok(db.Products.ToList().Select(p => p.Category = db.Categories.Find(p.CategoryId));
+            return Ok(db.Products.ToList());
         }
         /// <summary>
         /// Получить продукт по id

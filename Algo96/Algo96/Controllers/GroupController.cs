@@ -2,6 +2,7 @@
 using Algo96.EF;
 using Algo96.EF.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Web.Http.Description;
 using System.Xml.Linq;
 
@@ -23,8 +24,7 @@ namespace Algo96.Controllers
         [Route("/group")]
         public async Task<IActionResult> GetGroups()
         {
-            db.SaveChanges();
-            return Ok(db.Groups.ToList());
+            return Ok(db.Groups.Include(g => g.Course).Include(g => g.Place).ToList());
         }
 
         /// <summary>
@@ -37,15 +37,12 @@ namespace Algo96.Controllers
         [ResponseType(typeof(GetGroupResponse))]
         public async Task<IActionResult> GetGroupById (int id)
         {
-            var group = db.Groups.Find(id);
+            var group = db.Groups.Include(g=> g.Course)
+                .Include(g => g.Place)
+                .Include(g => g.Users)
+                .FirstOrDefault(g => g.Id ==id);
 
-            return Ok(new GetGroupResponse
-            {
-                Id = id,
-                Course = group.Course.ToString(),
-                DayOfWeek = group.DayOfWeek.ToString(),
-                Place = group.Place.ToString()
-            });
+            return Ok(group);
         }
 
         /// <summary>
