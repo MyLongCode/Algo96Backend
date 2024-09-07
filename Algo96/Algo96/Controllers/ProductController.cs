@@ -2,6 +2,7 @@
 using Algo96.EF;
 using Algo96.EF.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Algo96.Controllers
@@ -23,7 +24,7 @@ namespace Algo96.Controllers
         [Route("/product")]
         public async Task<IActionResult> GetProducts()
         {
-            return Ok(db.Products.ToList());
+            return Ok(db.Products.Include(p => p.Category).ToList());
         }
         /// <summary>
         /// Получить продукт по id
@@ -34,8 +35,7 @@ namespace Algo96.Controllers
         [Route("/product/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
-            var product = db.Products.Find(id);
-            product.Category = db.Categories.Find(product.CategoryId);
+            var product = db.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
             return Ok(product);
         }
         
@@ -73,6 +73,9 @@ namespace Algo96.Controllers
             db.SaveChanges();
             return Ok(category.Id);
         }
+
+        [HttpPost]
+
 
         public async Task<string> UploadFile(IFormFile dto)
         {
