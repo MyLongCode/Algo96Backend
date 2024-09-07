@@ -74,8 +74,32 @@ namespace Algo96.Controllers
             return Ok(category.Id);
         }
 
-        [HttpPost]
 
+        /// <summary>
+        /// Получить названия категорий
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("/category")]
+        public async Task<IActionResult> GetCategories()
+        {
+            var categories = db.Categories.ToList();
+            return Ok(categories);
+        }
+
+        /// <summary>
+        /// Удалить категорию по id
+        /// </summary>
+        /// <returns></returns>
+        [HttpDelete]
+        [Route("/category/{id}")]
+        public async Task<IActionResult> DeleteCategories(int id)
+        {
+            var category = db.Categories.Find(id);
+            db.Categories.Remove(category);
+            db.SaveChanges();
+            return Ok("category remove");
+        }
 
         public async Task<string> UploadFile(IFormFile dto)
         {

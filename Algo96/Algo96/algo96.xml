@@ -105,6 +105,12 @@
             <param name="title"></param>
             <returns></returns>
         </member>
+        <member name="M:Algo96.Controllers.ProductController.GetCategories">
+            <summary>
+            Получить названия категорий
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
             <summary>
             Зарегать пользователя
