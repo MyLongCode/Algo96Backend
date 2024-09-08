@@ -111,6 +111,31 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Algo96.Controllers.ProductController.GetCategoryById(System.Int32)">
+            <summary>
+            Получить все продукты по id категории
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.ProductController.DeleteCategories(System.Int32)">
+            <summary>
+            Удалить категорию по id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PurchaseController.GetPurchase">
+            <summary>
+            Получить все заказы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algo96.Controllers.PurchaseController.AddPurchase(Algo96.dto.Purchase.CreatePurchaseRequest)">
+            <summary>
+            Создать новый заказ по id пользователя и id продукта 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:Algo96.Controllers.UserController.RegisterUser(Algo96.dto.User.RegisterUserRequest)">
             <summary>
             Зарегать пользователя

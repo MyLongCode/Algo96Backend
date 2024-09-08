@@ -88,6 +88,25 @@ namespace Algo96.Controllers
         }
 
         /// <summary>
+        /// Получить все продукты по id категории
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("/category/{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+        {
+            var products = db.Products.Where(p => p.CategoryId == id).Select(p => new ProductDTO
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Image = p.Image,
+                Description = p.Description,
+                Price = p.Price
+            }).ToList();
+            return Ok(products);
+        }
+
+        /// <summary>
         /// Удалить категорию по id
         /// </summary>
         /// <returns></returns>
