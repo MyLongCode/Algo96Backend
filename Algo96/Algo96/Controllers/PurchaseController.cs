@@ -22,7 +22,21 @@ namespace Algo96.Controllers
         [Route("/purchase")]
         public async Task<IActionResult> GetPurchase()
         {
-            return Ok(db.Purchase.Include(p => p.User).Include(p => p.Product).ToList());
+            return Ok(db.Purchase.Include(p => p.User)
+                .Include(p => p.Product)
+                .Select(p => new PurchaseDTO
+                {
+                    Id = p.Id,
+                    CreatedDate = p.CreatedDate,
+                    User = new UserDTO
+                    {
+                        Id = p.User.Id,
+                        FullName = p.User.FullName
+                    },
+                    Product = p.Product,
+                    Status = p.Status.ToString()
+                })
+                .ToList());
         }
 
         /// <summary>
@@ -41,6 +55,7 @@ namespace Algo96.Controllers
                 Product = db.Products.Find(dto.ProductId),
                 ProductId = dto.ProductId,
                 CreatedDate = DateTime.Now,
+                Status = Status.Created
             };
             db.Purchase.Add(purchase);
             db.SaveChanges();
