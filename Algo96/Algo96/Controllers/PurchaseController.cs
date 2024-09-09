@@ -39,6 +39,17 @@ namespace Algo96.Controllers
                 .ToList());
         }
 
+        [HttpPost]
+        [Route("/purchase/{id}/approve")]
+        public async Task<IActionResult> ApprovePurchase(int id)
+        {
+            var purchase = db.Purchase.Find(id);
+            purchase.Status = Status.Approved;
+            db.Purchase.Update(purchase);
+            db.SaveChanges();
+            return Ok(purchase);    
+        }
+
         /// <summary>
         /// Создать новый заказ по id пользователя и id продукта 
         /// </summary>
