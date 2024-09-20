@@ -3,6 +3,7 @@ using Algo96.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    var basePath = AppContext.BaseDirectory;
-
-    var xmlPath = Path.Combine(basePath, "algo96.xml");
-    options.IncludeXmlComments(xmlPath);
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
